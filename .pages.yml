@@ -1,0 +1,58 @@
+media:
+  input: /
+  output: /
+
+content:
+  - name: stories
+    label: গল্প প্রকাশ
+    type: file
+    path: stories.json
+    format: json
+    fields:
+      - name: id
+        label: গল্পের ID
+        type: string
+        required: true
+
+      - name: title
+        label: গল্পের নাম
+        type: string
+        required: true
+
+      - name: author
+        label: লেখকের নাম
+        type: string
+        required: true
+
+      - name: category
+        label: গল্পের বিভাগ
+        type: select
+        options:
+          values:
+            - প্রেম
+            - জীবন
+            - রহস্য
+
+      - name: readTime
+        label: পড়ার সময়
+        type: string
+
+      - name: subtitle
+        label: গল্পের সংক্ষিপ্ত বিবরণ
+        type: text
+
+      - name: color
+        label: প্রচ্ছদের রং
+        type: string
+
+      - name: accent
+        label: অতিরিক্ত রং
+        type: string
+
+      - name: popular
+        label: জনপ্রিয় গল্প
+        type: boolean
+
+      - name: content
+        label: গল্পের সম্পূর্ণ লেখা
+        type: text
