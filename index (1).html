@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101014">
+  <meta name="description" content="অপ্রকাশিত — গল্পের পাতায়, অনুভূতির পৃথিবী।">
+  <title>অপ্রকাশিত — গল্পের পাতায়, অনুভূতির পৃথিবী</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="অপ্রকাশিত হোম">
+      <span class="brand-mark">অ</span>
+      <span class="brand-copy"><strong>অপ্রকাশিত</strong><small>গল্পের পাতায়, অনুভূতির পৃথিবী</small></span>
+    </a>
+    <button class="icon-button menu-toggle" id="menuToggle" aria-label="মেনু খুলুন" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a class="nav-link active" href="#home">হোম</a>
+      <a class="nav-link" href="#stories">গল্প</a>
+      <a class="nav-link" href="#authors">লেখক</a>
+      <a class="nav-link" href="#categories">বিভাগ</a>
+      <a class="nav-link" href="#popular">জনপ্রিয়</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="থিম পরিবর্তন">☼ <span>থিম</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> শব্দের আড়ালে লুকানো এক পৃথিবী</div>
+        <h1>কিছু গল্প <span>বলা হয় না,</span><br>শুধু অনুভব করা যায়।</h1>
+        <p>যে কথাগুলো কখনো বলা হয়নি, যে অনুভূতিগুলো শব্দ খুঁজে পায়নি—তাদের জন্যই এই ছোট্ট আশ্রয়।</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#stories">গল্পের জগতে প্রবেশ <span>↗</span></a>
+          <a class="text-link" href="#about">আমাদের সম্পর্কে <span>→</span></a>
+        </div>
+        <div class="hero-stats">
+          <div><strong id="storyCount">০৩</strong><span>গল্পের সংগ্রহ</span></div>
+          <i></i>
+          <div><strong>০১</strong><span>একটি অনুভূতির জগৎ</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="সাজানো বইয়ের তাক">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="floating-note note-top">“কিছু কথা থেকে যায়…”</div>
+        <div class="hero-book book-back"><span>স্মৃতির শহর</span></div>
+        <div class="hero-book book-front"><span class="cover-kicker">অপ্রকাশিত গল্প</span><strong>নীরবতার<br>ভাষা</strong><small>একটি অসমাপ্ত অনুভূতি</small><span class="cover-symbol">অ</span></div>
+        <div class="floating-note note-bottom"><span class="pulse"></span> পাতায় পাতায় অনুভূতি</div>
+        <div class="hero-platform"></div>
+      </div>
+    </section>
+
+    <section class="quote-strip">
+      <span class="quote-mark">“</span>
+      <p>সব গল্পের শেষ হয় না। কিছু গল্প মানুষের ভেতরে বেঁচে থাকে।</p>
+      <span class="quote-line"></span>
+    </section>
+
+    <section class="section-wrap library-section" id="stories">
+      <div class="section-heading">
+        <div><span class="section-kicker">THE LIBRARY</span><h2>গল্পের <em>বুকশেলফ</em></h2><p>নিজের মতো করে একটি গল্প বেছে নাও।</p></div>
+        <a href="#all-stories" class="text-link" id="showAllLink">সব গল্প দেখো <span>→</span></a>
+      </div>
+      <div class="library-toolbar">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="গল্প বা লেখকের নাম খুঁজুন..." aria-label="গল্প খুঁজুন"><kbd>⌕</kbd></label>
+        <div class="filter-chips" id="categoryFilters">
+          <button class="chip active" data-category="সব">সব গল্প</button>
+          <button class="chip" data-category="প্রেম">প্রেম</button>
+          <button class="chip" data-category="জীবন">জীবন</button>
+          <button class="chip" data-category="রহস্য">রহস্য</button>
+        </div>
+      </div>
+      <div class="shelf-label"><span>পাঠাগার / সংগ্রহ ০১</span><span class="shelf-status"><i></i> পাঠের জন্য প্রস্তুত</span></div>
+      <div class="book-grid" id="bookGrid" aria-live="polite"></div>
+      <div class="empty-state hidden" id="emptyState">এই খোঁজে কোনো গল্প পাওয়া যায়নি। অন্য শব্দ দিয়ে চেষ্টা করো।</div>
+    </section>
+
+    <section class="featured-section" id="popular">
+      <div class="section-wrap featured-inner">
+        <div class="featured-copy"><span class="section-kicker">EDITOR'S PICK</span><h2>কিছু অনুভূতি<br><em>চিরকাল অপ্রকাশিত।</em></h2><p>কখনো একটি গল্প আমাদের নিজের জীবনের আয়না হয়ে ওঠে। এই সপ্তাহে পড়ো এমনই একটি গল্প—যেখানে নীরবতাও কথা বলে।</p><button class="button button-light" id="featuredRead">নির্বাচিত গল্পটি পড়ো <span>↗</span></button></div>
+        <div class="featured-visual"><div class="featured-glow"></div><div class="featured-book"><span>অপ্রকাশিত</span><strong>শেষ<br>চিঠি</strong><small>কিছু বিদায় লেখা হয় না</small><div class="featured-stamp">পাঠকের<br>পছন্দ</div></div><div class="featured-caption">পাঠ ০১ <span>—</span> নীরবতার নথি</div></div>
+      </div>
+    </section>
+
+    <section class="section-wrap categories-section" id="categories">
+      <div class="section-heading"><div><span class="section-kicker">EXPLORE BY MOOD</span><h2>অনুভূতি অনুযায়ী <em>খুঁজে নাও</em></h2></div></div>
+      <div class="mood-grid">
+        <button class="mood-card mood-love" data-mood="প্রেম"><span class="mood-icon">♡</span><span><strong>প্রেম ও অপেক্ষা</strong><small>যা বলা হয়নি কাউকে</small></span><b>↗</b></button>
+        <button class="mood-card mood-life" data-mood="জীবন"><span class="mood-icon">☾</span><span><strong>জীবনের গল্প</strong><small>নিজেকে খুঁজে পাওয়ার পথে</small></span><b>↗</b></button>
+        <button class="mood-card mood-mystery" data-mood="রহস্য"><span class="mood-icon">⌁</span><span><strong>রহস্য ও কল্পনা</strong><small>অজানার দরজার ওপারে</small></span><b>↗</b></button>
+      </div>
+    </section>
+
+    <section class="author-section" id="authors">
+      <div class="section-wrap author-inner">
+        <div class="author-emblem">লেখা<br><span>থেকে</span><br>যাওয়া</div>
+        <div><span class="section-kicker">A SPACE FOR WRITERS</span><h2>তোমার গল্পও<br><em>এখানে জায়গা পেতে পারে।</em></h2><p>প্রতিটি অনুভূতিরই একটি গল্প আছে। অপ্রকাশিত একদিন নতুন লেখকদের কণ্ঠকেও জায়গা দিতে চায়।</p><a class="text-link" href="mailto:hello@example.com?subject=অপ্রকাশিত-এ%20লেখা%20প্রকাশ" id="writerLink">লেখক হতে আগ্রহী? <span>→</span></a><small class="demo-note">নোট: প্রকাশের ইমেইলটি চালু করতে index.html-এ hello@example.com বদলে নিজের ইমেইল দাও।</small></div>
+      </div>
+    </section>
+
+    <section class="section-wrap about-section" id="about">
+      <div><span class="section-kicker">ABOUT OPROKASHITO</span><h2>একটি ডিজিটাল আশ্রয়,<br><em>অপ্রকাশিত কথাদের জন্য।</em></h2></div>
+      <p>এখানে গল্প শুধু পড়া হয় না—অনুভব করা হয়। ধীর হও, একটি বই বেছে নাও, আর নিজের ভেতরের পৃথিবীটাকে একটু সময় দাও।</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">অ</span><span class="brand-copy"><strong>অপ্রকাশিত</strong><small>গল্পের পাতায়, অনুভূতির পৃথিবী</small></span></a>
+    <span class="footer-note">© <span id="year"></span> অপ্রকাশিত · অনুভূতির জন্য তৈরি</span>
+    <a href="#home" class="back-top">উপরে ফিরে যাও ↑</a>
+  </footer>
+
+  <div class="reader-overlay hidden" id="readerOverlay" role="dialog" aria-modal="true" aria-labelledby="readerTitle">
+    <div class="reader-panel">
+      <button class="reader-close" id="readerClose" aria-label="পাঠক বন্ধ করুন">×</button>
+      <div class="reader-topline"><span>অপ্রকাশিত / পাঠকক্ষ</span><span id="readerCategory">গল্প</span></div>
+      <div class="reader-bookmark">অ</div>
+      <h2 id="readerTitle">গল্পের নাম</h2>
+      <p class="reader-meta" id="readerMeta"></p>
+      <div class="reader-divider"></div>
+      <article class="reader-content" id="readerContent"></article>
+      <div class="reader-bottom"><span>— গল্পের শেষে, অনুভূতি থেকে যায়।</span><button id="readerBack" class="text-link">বুকশেলফে ফিরুন ←</button></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
